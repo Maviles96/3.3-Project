@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ServicePro</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <section id="landing">
+    <nav class="nav__container">
+      <ul class="nav__links">
+        <li><a href="#about" class="nav__link">About</a></li>
+        <li><a href="#services" class="nav__link">Services</a></li>
+        <li><a href="#pricing" class="nav__link nav__link--primary">Pricing</a></li>
+        <li><a href="#contact" class="nav__link">Contact Us</a></li>
+        <li><a href="#signup" class="nav__link nav__link--primary">Sign Up</a></li>
+      </ul>
+      <button class="btn__menu">
+        <i class="fas fa-bars"></i>
+      </button>
+      <button id="themeToggle">🛠️</button>
+    </nav>
+
+    <header class="header__container">
+      <h1>The Best Service for You</h1>
+      <h2>Find the best service here, where your happiness is our <span class="purple">Priority</span>.</h2>
+    </header>
+  </section>
+
+  <main>
+    <section id="highlights" class="container">
+      <h2 class="section__title">Why choose Service<span class="purple">Pro</span></h2>
+      <div class="highlight__wrapper">
+        <div class="highlight">
+          <i class="fab fa-linkedin highlight__icon"></i>
+          <h3 class="highlight__subtitle">Customizable</h3>
+          <p class="highlight__para">Reliable solutions tailored for you.</p>
+        </div>
+
+        <div class="highlight">
+          <i class="fas fa-book highlight__icon"></i>
+          <h3 class="highlight__subtitle">Quality Work</h3>
+          <p class="highlight__para">Designed & developed by <span class="purple">professionals</span>.</p>
+        </div>
+
+        <div class="highlight">
+          <i class="fas fa-tags highlight__icon"></i>
+          <h3 class="highlight__subtitle">Affordable</h3>
+          <p class="highlight__para">Premium services at fair rates.</p>
+        </div>
+      </div>
+    </section> 
+
+    <section id="pricing" class="container">
+      <h2 class="section__title">Pricing Plans</h2>
+      <div class="pricing">
+        <div class="price-card">
+          <h3>Basic</h3>
+          <p>$19/mo</p>
+        </div>
+        <div class="price-card highlight">
+          <h3>Pro</h3>
+          <p>$49/mo</p>
+        </div>
+        <div class="price-card">
+          <h3>Enterprise</h3>
+          <p>$99/mo</p>
+        </div>
+      </div>
+    </section>
+    <section id="contact" class="container">
+      <h2 class="section__title">Contact Us</h2>
+      <form>
+        <input type="text" placeholder="Name" required />
+        <input type="email" placeholder="Email" required />
+        <textarea placeholder="Message"></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </section>
+  </main>
+  <footer>© 2026 ServicePro</footer>
+  <script src="script.js"></script>
+</body>
+</html>
