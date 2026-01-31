@@ -14,10 +14,11 @@ body {
 
 /* Navigation */
 .nav__container {
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 40px;
+  padding: 30px 60px;
   background-color: #fff;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   position: sticky;
@@ -25,14 +26,24 @@ body {
   z-index: 100;
 }
 
-.logo {
-  width: 120px;
+.nav__logo {
+  font-size: 22px;
+  font-weight: 700;
+  text-decoration: none;
+  color: #333;
+}
+
+.nav__right {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
 }
 
 .nav__links {
   display: flex;
   list-style: none;
   gap: 25px;
+  margin-left: auto;
 }
 
 .nav__link {
@@ -45,7 +56,7 @@ body {
 }
 
 .nav__link:hover {
-  color: #6a0dad; /* Purple highlight */
+  color: #6a0dad;
 }
 
 .nav__link--primary {
@@ -79,9 +90,9 @@ body {
 #landing {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: stretch;
   text-align: center;
-  padding: 80px 20px;
+  padding: 0 0 100px;
   background: linear-gradient(135deg, #6a0dad, #b19cd9);
   color: #fff;
 }
@@ -91,20 +102,87 @@ body {
   margin-bottom: 20px;
 }
 
+#hero-image.container {
+  width: 100%;
+  max-width: 100%;
+  margin: 30px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-img {
+  display: block;
+  width: 50%;
+  max-width: 500px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  object-fit: cover;
+}
+
+.hero-img {
+  width: 50%;
+  max-width: 500px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  object-fit: cover;
+}
+
+@media screen and (max-width: 1024px) {
+  .hero-img {
+    width: 70%;
+    max-width: 450px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero-img {
+    width: 90%;
+    max-width: 100%;
+  }
+}
+
+
 .header__container h2 {
   font-size: 24px;
   font-weight: 400;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.header__buttons {
+  margin-top: 30px;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.btn {
+  text-decoration: none;
+  padding: 12px 25px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.btn.primary {
+  background-color: #fff;
+  color: #6a0dad;
+}
+
+.btn.secondary {
+  border: 2px solid #fff;
+  color: #fff;
 }
 
 .purple {
   color: #6a0dad;
 }
 
-/* Highlights Section */
+/* Layout Containers */
 .container {
   width: 90%;
   max-width: 1200px;
-  margin: 60px auto;
+  margin: 80px auto;
 }
 
 .section__title {
@@ -113,6 +191,7 @@ body {
   margin-bottom: 40px;
 }
 
+/* Highlights */
 .highlight__wrapper {
   display: flex;
   justify-content: space-between;
@@ -122,7 +201,7 @@ body {
 
 .highlight {
   background-color: #fff;
-  padding: 25px;
+  padding: 30px;
   border-radius: 10px;
   text-align: center;
   flex: 1 1 250px;
@@ -135,50 +214,42 @@ body {
   color: #6a0dad;
 }
 
-.highlight__subtitle {
-  font-size: 20px;
-  margin-bottom: 10px;
-}
-
-.highlight__para {
-  font-size: 16px;
-  color: #555;
-}
-
-/* Pricing Section */
-.pricing {
+/* Testimonials */
+.testimonials__wrapper {
   display: flex;
-  justify-content: center;
   gap: 25px;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
-.price-card {
+.testimonial {
   background-color: #fff;
-  padding: 30px 20px;
+  padding: 30px;
   border-radius: 10px;
-  text-align: center;
-  width: 250px;
+  max-width: 350px;
   box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-  transition: transform 0.3s;
 }
 
-.price-card.highlight {
-  border: 2px solid #6a0dad;
-  transform: scale(1.05);
+.testimonial__text {
+  font-style: italic;
+  margin-bottom: 20px;
 }
 
-.price-card h3 {
-  font-size: 22px;
-  margin-bottom: 15px;
-}
-
-.price-card p {
-  font-size: 18px;
+.testimonial__author {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   font-weight: bold;
 }
 
-/* Contact Section */
+.avatar {
+  width: 40px;
+  height: 40px;
+  background-color: #ddd;
+  border-radius: 50%;
+}
+
+/* Contact */
 form {
   display: flex;
   flex-direction: column;
@@ -191,17 +262,10 @@ input, textarea {
   padding: 12px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  font-size: 16px;
-}
-
-textarea {
-  resize: vertical;
-  min-height: 120px;
 }
 
 form button {
   padding: 12px;
-  font-size: 16px;
   border: none;
   background-color: #6a0dad;
   color: #fff;
@@ -209,45 +273,335 @@ form button {
   cursor: pointer;
 }
 
-form button:hover {
-  background-color: #530b9d;
-}
-
 /* Footer */
 footer {
   text-align: center;
-  padding: 20px;
+  padding: 25px;
   background-color: #222;
   color: #fff;
-  margin-top: 40px;
 }
 
 /* Responsive */
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
   .nav__links {
     display: none;
-    flex-direction: column;
-    background-color: #fff;
-    position: absolute;
-    top: 70px;
-    right: 40px;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
   }
 
   .btn__menu {
     display: block;
   }
 
-  .highlight__wrapper {
-    flex-direction: column;
-    align-items: center;
+  .header__container h1 {
+    font-size: 36px;
   }
 
-  .pricing {
+  .header__buttons {
+    flex-direction: column;
+  }
+
+  .highlight__wrapper,
+  .pricing,
+  .testimonials__wrapper {
     flex-direction: column;
     align-items: center;
   }
 }
 
+/* Testimonials Section */
+.testimonials__wrapper {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.testimonial {
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  flex: 1 1 30%; /* 3 per row on large screens */
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.testimonial__text {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 15px;
+  font-style: italic;
+}
+
+.testimonial__author {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.testimonial__author .avatar {
+  width: 40px;
+  height: 40px;
+  background-color: #6a0dad;
+  border-radius: 50%;
+}
+
+/* Medium screens: 2 per row */
+@media screen and (max-width: 1024px) {
+  .testimonial {
+    flex: 1 1 45%;
+  }
+}
+
+/* Mobile: stacked */
+@media screen and (max-width: 768px) {
+  .testimonial {
+    flex: 1 1 100%;
+  }
+}
+
+.testimonial {
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  flex: 1 1 30%;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add smooth transition */
+}
+
+.testimonial:hover {
+  transform: translateY(-8px); /* Slight lift */
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15); /* Stronger shadow on hover */
+}
+
+.testimonial {
+  cursor: pointer;
+}
+
+/* Newsletter / Hero Signup Section */
+.newsletter {
+  background-color: #f5f5f5;
+  text-align: center;
+  padding: 100px 20px; /* taller padding for hero feel */
+  border-radius: 10px;
+  margin-top: 40px; /* spacing below header */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* subtle card-like shadow */
+}
+
+.newsletter-content {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.newsletter h2 {
+  font-size: 3rem; /* slightly larger for hero look */
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 20px;
+}
+
+.newsletter p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 35px;
+  line-height: 1.5;
+}
+
+.newsletter-form {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.newsletter-form input[type="email"] {
+  padding: 18px 25px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  min-width: 300px;
+  box-shadow: inset 0 2px 5px rgba(0,0,0,0.05); /* subtle inner shadow */
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.newsletter-form input[type="email"]:focus {
+  outline: none;
+  border-color: #6a0dad;
+  box-shadow: 0 0 8px rgba(106,13,173,0.3);
+}
+
+.newsletter-form button {
+  padding: 18px 35px;
+  font-size: 1rem;
+  background-color: #6a0dad;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.newsletter-form button:hover {
+  background-color: #530b9d;
+  transform: translateY(-2px); /* slight lift on hover */
+}
+
+/* Responsive for smaller screens */
+@media screen and (max-width: 768px) {
+  .newsletter {
+    padding: 70px 20px;
+  }
+
+  .newsletter h2 {
+    font-size: 2.2rem;
+  }
+
+  .newsletter p {
+    font-size: 1rem;
+  }
+
+  .newsletter-form {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .newsletter-form input[type="email"],
+  .newsletter-form button {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+.pricing-section {
+  text-align: center;
+}
+
+.pricing__subtitle {
+  max-width: 600px;
+  margin: -20px auto 50px;
+  color: #666;
+  font-size: 18px;
+}
+
+.pricing__grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.pricing__card {
+  background-color: #fff;
+  width: 300px;
+  padding: 45px 30px;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pricing__card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.12);
+}
+
+.pricing__card--featured {
+  border: 2px solid #6a0dad;
+  transform: scale(1.05);
+}
+
+.pricing__badge {
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #6a0dad;
+  color: #fff;
+  padding: 6px 16px;
+  font-size: 14px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.pricing__plan {
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.pricing__price {
+  font-size: 48px;
+  font-weight: bold;
+  color: #6a0dad;
+}
+
+.pricing__duration {
+  display: block;
+  margin-bottom: 30px;
+  color: #777;
+}
+
+.pricing__features {
+  list-style: none;
+  margin-bottom: 35px;
+}
+
+.pricing__features li {
+  margin: 12px 0;
+  color: #555;
+}
+
+.pricing__btn {
+  display: inline-block;
+  padding: 14px 32px;
+  border-radius: 8px;
+  border: 2px solid #6a0dad;
+  color: #6a0dad;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.pricing__btn:hover {
+  background-color: #6a0dad;
+  color: #fff;
+}
+
+.pricing__btn--primary {
+  background-color: #6a0dad;
+  color: #fff;
+}
+
+.pricing__btn--primary:hover {
+  background-color: #530b9d;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .pricing__card--featured {
+    transform: none;
+  }
+}
+
+.pricing__grid {
+  flex-wrap: nowrap;
+}
+
+@media screen and (max-width: 1024px) {
+  .pricing__card {
+    width: 260px;
+    padding: 35px 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .pricing__card {
+    width: 230px;
+    padding: 30px 18px;
+  }
+}

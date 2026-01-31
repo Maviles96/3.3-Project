@@ -1,16 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ServicePro</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="style.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    crossorigin="anonymous"
+  />
 </head>
+
 <body>
+
   <section id="landing">
     <nav class="nav__container">
+      <a href="#landing" class="nav__logo">
+        Service<span class="purple">Pro</span>
+      </a>
+      <div class="nav__right">
       <ul class="nav__links">
         <li><a href="#about" class="nav__link">About</a></li>
         <li><a href="#services" class="nav__link">Services</a></li>
@@ -18,61 +28,215 @@
         <li><a href="#contact" class="nav__link">Contact Us</a></li>
         <li><a href="#signup" class="nav__link nav__link--primary">Sign Up</a></li>
       </ul>
-      <button class="btn__menu">
-        <i class="fas fa-bars"></i>
+
+      <button class="btn__menu" aria-label="Open menu">
+        <i class="fa-solid fa-bars"></i>
       </button>
-      <button id="themeToggle">🛠️</button>
+    </div>
     </nav>
 
     <header class="header__container">
       <h1>The Best Service for You</h1>
-      <h2>Find the best service here, where your happiness is our <span class="purple">Priority</span>.</h2>
+      <h2>
+        Find the best service here, where your happiness is our
+        <span class="purple">Priority</span>.
+      </h2>
+
+      <div class="header__buttons">
+        <a href="#pricing" class="btn primary">Get Started</a>
+        <a href="#contact" class="btn secondary">Contact Us</a>
+      </div>
     </header>
+    
+    <section id="signup" class="newsletter container">
+  <div class="newsletter-content">
+    <h2>Beautiful React Templates for you.</h2>
+    <p>
+      Our templates are easy to setup, understand and customize. Fully modular
+      components with a variety of pages and components.
+    </p>
+    <form class="newsletter-form">
+      <input type="email" placeholder="Your E-mail Address" required />
+      <button type="submit" class="btn primary">Get Started</button>
+    </form>
+  </div>
+</section>
+
+    <section id="hero-image" class="container">
+  <img src="service.jpg" alt="Customer Service" class="hero-img" />
+</section>
   </section>
 
   <main>
+
+    <section id="about" class="container"></section>
+
+    <section id="services" class="container"></section>
+
     <section id="highlights" class="container">
-      <h2 class="section__title">Why choose Service<span class="purple">Pro</span></h2>
+      <h2 class="section__title">
+        Why choose Service<span class="purple">Pro</span>
+      </h2>
+
       <div class="highlight__wrapper">
         <div class="highlight">
-          <i class="fab fa-linkedin highlight__icon"></i>
+          <i class="fa-brands fa-linkedin highlight__icon"></i>
           <h3 class="highlight__subtitle">Customizable</h3>
           <p class="highlight__para">Reliable solutions tailored for you.</p>
         </div>
 
         <div class="highlight">
-          <i class="fas fa-book highlight__icon"></i>
+          <i class="fa-solid fa-book highlight__icon"></i>
           <h3 class="highlight__subtitle">Quality Work</h3>
-          <p class="highlight__para">Designed & developed by <span class="purple">professionals</span>.</p>
+          <p class="highlight__para">
+            Designed & developed by <span class="purple">professionals</span>.
+          </p>
         </div>
 
         <div class="highlight">
-          <i class="fas fa-tags highlight__icon"></i>
+          <i class="fa-solid fa-tags highlight__icon"></i>
           <h3 class="highlight__subtitle">Affordable</h3>
           <p class="highlight__para">Premium services at fair rates.</p>
         </div>
       </div>
-    </section> 
-
-    <section id="pricing" class="container">
-      <h2 class="section__title">Pricing Plans</h2>
-      <div class="pricing">
-        <div class="price-card">
-          <h3>Basic</h3>
-          <p>$19/mo</p>
-        </div>
-        <div class="price-card highlight">
-          <h3>Pro</h3>
-          <p>$49/mo</p>
-        </div>
-        <div class="price-card">
-          <h3>Enterprise</h3>
-          <p>$99/mo</p>
-        </div>
-      </div>
     </section>
+
+   <section id="pricing" class="container pricing-section">
+  <h2 class="section__title">Pricing Plans</h2>
+  <p class="pricing__subtitle">
+    Simple, transparent pricing that grows with you
+  </p>
+
+  <div class="pricing__grid">
+    <div class="pricing__card">
+      <h3 class="pricing__plan">Starter</h3>
+      <p class="pricing__price">$19</p>
+      <span class="pricing__duration">per month</span>
+
+      <ul class="pricing__features">
+        <li>Basic Support</li>
+        <li>1 Project</li>
+        <li>Email Access</li>
+        <li>Community Help</li>
+      </ul>
+
+      <a href="#signup" class="pricing__btn">Get Started</a>
+    </div>
+
+    <div class="pricing__card pricing__card--featured">
+      <span class="pricing__badge">Most Popular</span>
+
+      <h3 class="pricing__plan">Pro</h3>
+      <p class="pricing__price">$49</p>
+      <span class="pricing__duration">per month</span>
+
+      <ul class="pricing__features">
+        <li>Priority Support</li>
+        <li>Unlimited Projects</li>
+        <li>Advanced Analytics</li>
+        <li>Team Access</li>
+      </ul>
+
+      <a href="#signup" class="pricing__btn pricing__btn--primary">
+        Get Started
+      </a>
+    </div>
+
+    <div class="pricing__card">
+      <h3 class="pricing__plan">Enterprise</h3>
+      <p class="pricing__price">$99</p>
+      <span class="pricing__duration">per month</span>
+
+      <ul class="pricing__features">
+        <li>Dedicated Manager</li>
+        <li>Custom Solutions</li>
+        <li>24/7 Support</li>
+        <li>Unlimited Team Members</li>
+      </ul>
+
+      <a href="#signup" class="pricing__btn">Get Started</a>
+    </div>
+  </div>
+</section>
+
+
+    <section id="testimonials" class="container">
+  <h2 class="section__title">
+    What Our <span class="purple">Customers</span> Say
+  </h2>
+
+  <div class="testimonials__wrapper">
+    <div class="testimonial">
+      <p class="testimonial__text">
+        “ServicePro completely changed the way we handle customer support.
+        Fast, friendly, and reliable!”
+      </p>
+      <div class="testimonial__author">
+        <div class="avatar"></div>
+        <span>Alex Johnson</span>
+      </div>
+    </div>
+
+    <div class="testimonial">
+      <p class="testimonial__text">
+        “Professional service with outstanding results. Highly recommended
+        for growing businesses.”
+      </p>
+      <div class="testimonial__author">
+        <div class="avatar"></div>
+        <span>Maria Lopez</span>
+      </div>
+    </div>
+
+    <div class="testimonial">
+      <p class="testimonial__text">
+        “Affordable pricing and amazing support. ServicePro delivers every
+        time.”
+      </p>
+      <div class="testimonial__author">
+        <div class="avatar"></div>
+        <span>David Kim</span>
+      </div>
+    </div>
+
+    <div class="testimonial">
+      <p class="testimonial__text">
+        “The team at ServicePro is fantastic! They always go above and beyond
+        to help us.”
+      </p>
+      <div class="testimonial__author">
+        <div class="avatar"></div>
+        <span>Sophia Williams</span>
+      </div>
+    </div>
+
+    <div class="testimonial">
+      <p class="testimonial__text">
+        “Excellent communication and outstanding results. I highly recommend
+        ServicePro.”
+      </p>
+      <div class="testimonial__author">
+        <div class="avatar"></div>
+        <span>James Smith</span>
+      </div>
+    </div>
+
+    <div class="testimonial">
+      <p class="testimonial__text">
+        “Quick, professional, and reliable. ServicePro exceeded our
+        expectations every time.”
+      </p>
+      <div class="testimonial__author">
+        <div class="avatar"></div>
+        <span>Emily Davis</span>
+      </div>
+    </div>
+  </div>
+</section>
+
     <section id="contact" class="container">
       <h2 class="section__title">Contact Us</h2>
+
       <form>
         <input type="text" placeholder="Name" required />
         <input type="email" placeholder="Email" required />
@@ -80,8 +244,13 @@
         <button type="submit">Send</button>
       </form>
     </section>
+
+
   </main>
-  <footer>© 2026 ServicePro</footer>
-  <script src="script.js"></script>
+
+  <footer>
+    © 2026 ServicePro
+  </footer>
+
 </body>
 </html>
