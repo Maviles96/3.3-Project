@@ -48,24 +48,25 @@
       </div>
     </header>
     
-    <section id="signup" class="newsletter container">
-  <div class="newsletter-content">
-    <h2>Beautiful React Templates for you.</h2>
-    <p>
-      Our templates are easy to setup, understand and customize. Fully modular
-      components with a variety of pages and components.
-    </p>
-    <form class="newsletter-form">
-      <input type="email" placeholder="Your E-mail Address" required />
-      <button type="submit" class="btn primary">Get Started</button>
-    </form>
-  </div>
-</section>
-
-    <section id="hero-image" class="container">
-  <img src="service.jpg" alt="Customer Service" class="hero-img" />
-</section>
+   <section class="hero-row container">
+  <section id="signup" class="newsletter">
+    <div class="newsletter-content">
+      <h2>Beautiful React Templates for you.</h2>
+      <p>
+        Our templates are easy to setup, understand and customize. Fully modular
+        components with a variety of pages and components.
+      </p>
+      <form class="newsletter-form">
+        <input type="email" placeholder="Your E-mail Address" required />
+        <button type="submit" class="btn primary">Get Started</button>
+      </form>
+    </div>
   </section>
+
+  <section id="hero-image">
+    <img src="service.jpg" alt="Customer Service" class="hero-img" />
+  </section>
+</section>
 
   <main>
 
@@ -98,8 +99,26 @@
           <h3 class="highlight__subtitle">Affordable</h3>
           <p class="highlight__para">Premium services at fair rates.</p>
         </div>
-      </div>
-    </section>
+
+        <div class="highlight">
+  <i class="fa-solid fa-rocket highlight__icon"></i>
+  <h3 class="highlight__subtitle">Fast Delivery</h3>
+  <p class="highlight__para">We deliver solutions quickly without compromising quality.</p>
+</div>
+
+<div class="highlight">
+  <i class="fa-solid fa-shield-halved highlight__icon"></i>
+  <h3 class="highlight__subtitle">Secure</h3>
+  <p class="highlight__para">Your data and privacy are our top priorities.</p>
+</div>
+
+<div class="highlight">
+  <i class="fa-solid fa-thumbs-up highlight__icon"></i>
+  <h3 class="highlight__subtitle">Trusted</h3>
+  <p class="highlight__para">Loved by hundreds of customers worldwide.</p>
+</div>
+  </div>
+  </section>
 
    <section id="pricing" class="container pricing-section">
   <h2 class="section__title">Pricing Plans</h2>
@@ -159,80 +178,40 @@
   </div>
 </section>
 
-
-    <section id="testimonials" class="container">
+ 
+<section id="testimonials" class="container">
   <h2 class="section__title">
     What Our <span class="purple">Customers</span> Say
   </h2>
 
-  <div class="testimonials__wrapper">
-    <div class="testimonial">
+  <div class="testimonial-row">
+    <!-- Text + stars -->
+    <div class="testimonial-text">
+      <div class="testimonial__stars">
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+      </div>
+
       <p class="testimonial__text">
-        “ServicePro completely changed the way we handle customer support.
-        Fast, friendly, and reliable!”
+        “I absolutely love ServicePro! The support team was incredibly responsive,
+        and the service quality is unmatched. It truly helped our business grow!”
       </p>
+
       <div class="testimonial__author">
-        <div class="avatar"></div>
-        <span>Alex Johnson</span>
+        <span>Charlotte Hale — Director</span>
       </div>
     </div>
 
-    <div class="testimonial">
-      <p class="testimonial__text">
-        “Professional service with outstanding results. Highly recommended
-        for growing businesses.”
-      </p>
-      <div class="testimonial__author">
-        <div class="avatar"></div>
-        <span>Maria Lopez</span>
-      </div>
-    </div>
-
-    <div class="testimonial">
-      <p class="testimonial__text">
-        “Affordable pricing and amazing support. ServicePro delivers every
-        time.”
-      </p>
-      <div class="testimonial__author">
-        <div class="avatar"></div>
-        <span>David Kim</span>
-      </div>
-    </div>
-
-    <div class="testimonial">
-      <p class="testimonial__text">
-        “The team at ServicePro is fantastic! They always go above and beyond
-        to help us.”
-      </p>
-      <div class="testimonial__author">
-        <div class="avatar"></div>
-        <span>Sophia Williams</span>
-      </div>
-    </div>
-
-    <div class="testimonial">
-      <p class="testimonial__text">
-        “Excellent communication and outstanding results. I highly recommend
-        ServicePro.”
-      </p>
-      <div class="testimonial__author">
-        <div class="avatar"></div>
-        <span>James Smith</span>
-      </div>
-    </div>
-
-    <div class="testimonial">
-      <p class="testimonial__text">
-        “Quick, professional, and reliable. ServicePro exceeded our
-        expectations every time.”
-      </p>
-      <div class="testimonial__author">
-        <div class="avatar"></div>
-        <span>Emily Davis</span>
-      </div>
+    <div class="testimonial-image">
+      <img src="5 stars.png" alt="Customer feedback illustration" />
     </div>
   </div>
 </section>
+
+   
 
     <section id="contact" class="container">
       <h2 class="section__title">Contact Us</h2>
@@ -248,9 +227,59 @@
 
   </main>
 
-  <footer>
-    © 2026 ServicePro
-  </footer>
+  <footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-column">
+      <h4>MAIN</h4>
+      <ul>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">FAQs</a></li>
+        <li><a href="#">Support</a></li>
+        <li><a href="#">About Us</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h4>PRODUCT</h4>
+      <ul>
+        <li><a href="#">Log In</a></li>
+        <li><a href="#">Personal</a></li>
+        <li><a href="#">Business</a></li>
+        <li><a href="#">Team</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h4>PRESS</h4>
+      <ul>
+        <li><a href="#">Logos</a></li>
+        <li><a href="#">Events</a></li>
+        <li><a href="#">Stories</a></li>
+        <li><a href="#">Office</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h4>TEAM</h4>
+      <ul>
+        <li><a href="#">Career</a></li>
+        <li><a href="#">Founders</a></li>
+        <li><a href="#">Culture</a></li>
+        <li><a href="#">Onboarding</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h4>LEGAL</h4>
+      <ul>
+        <li><a href="#">GDPR</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms of Service</a></li>
+        <li><a href="#">Disclaimer</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 ServicePro. All rights reserved.</p>
+  </div>
+</footer>
 
 </body>
 </html>
